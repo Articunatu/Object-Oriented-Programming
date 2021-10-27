@@ -1,26 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Heritage_Zoo
 {
-    class Animal
+    class Animal: Life
     {               // dm          // km/h
-        public int length = 0, velocity = 0;
-        public string species, name, sound;
-        public bool isVegan;
+        public int velocity = 0, amountOfLegs;
+        public string  sound, uniqueInfo, move;
+        public bool isVegan, isWild;
         
-        public string MakeSound(string newSound)
+        public string MakeSound(string sound)
         {
-            sound = newSound;
-            return "En " + name.ToLower() + " skriker: " + sound.ToUpper();
+            this.sound = sound;
+            return "En " + name.ToLower() + " skriker: " + sound.ToUpper() + "\n\n";
         }
+
+        public string Movement()
+        {
+            return "En " + name.ToLower() + " kan "+ move +"  med en hastighet på " + velocity + "km/h.";
+        }
+
         public void AnimalInfo()
         {
+            string veganInfo = isVegan ? "Växter" : "Kött";
             Console.WriteLine("Djurart: " + species +
                             "\nArtnamn: " + name +
-                            "\nHastighet: " + velocity +
-                            "\nLängd: " + length);
+                            "\nÄter " + veganInfo +
+                            "\nLängd: " + height +
+                            "\n" + uniqueInfo +
+                            "\n" + MakeSound(sound));
         }
+    }
+
+    class Life
+    {
+        public int height = 0;
+        public string species, name;
+    }
+
+    class Growth
+    {
+
     }
 }
