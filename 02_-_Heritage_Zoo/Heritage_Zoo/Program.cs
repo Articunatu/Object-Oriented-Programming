@@ -14,24 +14,30 @@ namespace Heritage_Zoo
 
         public void ParrotCreator()
         {
-            Bird parrot = new Bird("Pappegoja", "Jag kan härma läten!");
-            parrot.height = 5;
-            parrot.isVegan = true;
-            parrot.wingSize = 4;
+            Bird parrot = new Bird("Pappegoja", "Jag kan härma läten!")
+            {
+                height = 5,
+                isVegan = true,
+                wingSize = 4
+            };            
             parrot.AnimalInfo();
         }
 
         public void SparrowCReator()
         {
-            Bird sparrow = new Bird("Sparv", "FUUII! FUUII!");
-            sparrow.wingSize = 1;
+            Bird sparrow = new Bird("Sparv", "FUUII! FUUII!")
+            {
+                wingSize = 1
+            };
             sparrow.AnimalInfo();
         }
 
         public void BeetleCreator()
         {
-            Insect beetle = new Insect("Skalbagge", "Bzzzzzz....!");
-            beetle.amountOfWings = 4;
+            Insect beetle = new Insect("Skalbagge")
+            {
+                amountOfWings = 4
+            };          
             beetle.AnimalInfo();
         }
     }

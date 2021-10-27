@@ -4,17 +4,17 @@ namespace Heritage_Zoo
 {
     class Life
     {
-        public int height = 0;
+        public int height = 88;
         public string species, name;
     }
 
     class Animal: Life
     {               // dm          // km/h
-        public int velocity = 0, amountOfLegs;
-        public string  sound, uniqueInfo, move;
+        public int velocity, amountOfLegs = 2;
+        public string  sound, uniqueInfo = "Unika egenskaper okända", move;
         public bool isVegan, isWild;
         
-        public string MakeSound(string sound)
+        public virtual string MakeSound(string sound)
         {
             this.sound = sound;
             return "En " + name.ToLower() + " skriker: " + sound.ToUpper() + "\n\n";
@@ -22,23 +22,26 @@ namespace Heritage_Zoo
 
         public string Movement()
         {
-            return "En " + name.ToLower() + " kan "+ move +"  med en hastighet på " + velocity + "km/h.";
+            return "Den kan "+ move +"  med en hastighet på " + velocity + "km/h.";
         }
 
         public void AnimalInfo()
         {
             string veganInfo = isVegan ? "Växter" : "Kött";
-            Console.WriteLine("Djurart: " + species +
-                            "\nArtnamn: " + name +
-                            "\nÄter " + veganInfo +
-                            "\nLängd: " + height +
+            Console.WriteLine("Artnamn: " + name +
+                            "\nDjurart: " + species +
+                            "\nÄter: " + veganInfo +
+                            "\nLängd: " + height +" dm" +
+                            "\nDen har " + amountOfLegs + " ben"+
                             "\n" + uniqueInfo +
+                            "\n" + Movement() +
                             "\n" + MakeSound(sound));
         }
     }
 
     class Plant : Life
     {
-
+        int amountOfLeaves;
+        string barkColor, petalColor;
     }
 }

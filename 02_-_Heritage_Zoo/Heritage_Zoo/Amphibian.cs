@@ -22,7 +22,6 @@ namespace Heritage_Zoo
             this.sound = sound;
 
             jumpHeight = 100;
-            amountOfLegs = 2;
             species = "Groda";
         }
     }
