@@ -8,6 +8,11 @@ namespace _04___Collection_Generics
     {
         static void Main()
         {
+            PrintStack();         
+        }
+
+        static void PrintStack()
+        {
             Console.WriteLine("\nPART 1 - STACK\n");
             Console.WriteLine("****************************");
 
@@ -67,6 +72,11 @@ namespace _04___Collection_Generics
             string hasThirdEmployee = stackedEmployees.Contains(empo3) ? "Emp3 is in stack" : "Emp3 is NO in stack";
             Console.WriteLine(hasThirdEmployee);
 
+            PrintList(empo1, empo2, empo3, empo4, empo5);
+        }
+
+        static void PrintList(Employee empo1, Employee empo2, Employee empo3, Employee empo4, Employee empo5)
+        {
             Console.WriteLine("****************************");
             Console.WriteLine("\nPART 2 - LIST\n");
             Console.WriteLine("****************************");
