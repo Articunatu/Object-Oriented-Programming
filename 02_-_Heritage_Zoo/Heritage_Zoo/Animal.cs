@@ -2,6 +2,12 @@
 
 namespace Heritage_Zoo
 {
+    class Life
+    {
+        public int height = 0;
+        public string species, name;
+    }
+
     class Animal: Life
     {               // dm          // km/h
         public int velocity = 0, amountOfLegs;
@@ -31,13 +37,7 @@ namespace Heritage_Zoo
         }
     }
 
-    class Life
-    {
-        public int height = 0;
-        public string species, name;
-    }
-
-    class Growth
+    class Plant : Life
     {
 
     }
