@@ -13,6 +13,11 @@ namespace Heritage_Zoo
         public int velocity, amountOfLegs = 2;
         public string  sound, uniqueInfo = "Unika egenskaper okända", move;
         public bool isVegan, isWild;
+
+        public Animal()
+        {
+
+        }
         
         public virtual string MakeSound(string sound)
         {
@@ -25,7 +30,7 @@ namespace Heritage_Zoo
             return "Den kan "+ move +"  med en hastighet på " + velocity + "km/h.";
         }
 
-        public void AnimalInfo()
+        public virtual void AnimalInfo()
         {
             string veganInfo = isVegan ? "Växter" : "Kött";
             Console.WriteLine("Artnamn: " + name +
@@ -43,5 +48,6 @@ namespace Heritage_Zoo
     {
         int amountOfLeaves;
         string barkColor, petalColor;
+
     }
 }

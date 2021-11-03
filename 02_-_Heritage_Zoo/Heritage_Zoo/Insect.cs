@@ -9,7 +9,7 @@ namespace Heritage_Zoo
         public Insect(string name)
         {
             this.name = name;
-            this.sound = "Bzzzzzz....!";
+            sound = "Bzzzzzz....!";
 
             amountOfLegs = 6;
             species = "Insekt";
