@@ -8,6 +8,7 @@
             obj.ParrotCreator();
             obj.SparrowCreator();
             obj.BeetleCreator();
+            obj.TulpinCreator();
         }
 
         public void ParrotCreator()
@@ -41,6 +42,17 @@
             };
             beetle.AnimalInfo();
             beetle.UniqueInfo();
+        }
+
+        public void TulpinCreator()
+        {
+            Plant tulpin = new Plant("Tulpan", "Blomma")
+            {
+                amountOfLeaves = 2,
+                petalColor = "Gul",
+                height = 2
+            };
+            tulpin.PlantInfo();
         }
     }
 }

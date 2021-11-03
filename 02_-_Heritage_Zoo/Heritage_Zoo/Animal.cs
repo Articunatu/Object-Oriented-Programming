@@ -37,19 +37,32 @@ namespace Heritage_Zoo
                             "\nDjurart: " + species +
                             "\nÄter: " + veganInfo +
                             "\nLängd: " + height +" dm" +
-                            "\nDen har " + amountOfLegs + " ben"+
+                            "\nDen har " + amountOfLegs + " stycken ben"+
                             //"\n" + uniqueInfo +
                             "\n" + Movement() +
                             "\n" + MakeSound(sound));
-        }
-        
-        
+        }      
     }
 
     class Plant : Life
     {
-        int amountOfLeaves;
-        string barkColor, petalColor;
+        public int amountOfLeaves;
+        public string petalColor;
 
+        public Plant(string name, string species)
+        {
+            base.name = name;
+            base.species = species;
+        }
+
+        public void PlantInfo()
+        {
+            Console.WriteLine("Artnamn: " + name +
+                            "\nVäxtart: " + species +
+                            "\nLängd: " + height + " dm" +
+
+                            "\nDen har " + amountOfLeaves + " stycken löv" +
+                            "\nDess blomblad har färgen " + petalColor);
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Heritage_Zoo
 
         public void UniqueInfo()
         {
-            Console.WriteLine($"Denna insekt har {amountOfWings} stycken vingar."); 
+            Console.WriteLine($"Denna insekt har {amountOfWings} stycken vingar.\n\n"); 
         }
 
         public override string MakeSound(string sound)
