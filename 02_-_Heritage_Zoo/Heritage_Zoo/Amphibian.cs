@@ -18,8 +18,8 @@ namespace Heritage_Zoo
 
         public Frog(string name, string sound)
         {
-            this.name = name;
-            this.sound = sound;
+            base.name = name;
+            base.sound = sound;
 
             jumpHeight = 100;
             species = "Groda";

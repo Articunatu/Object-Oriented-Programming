@@ -4,26 +4,28 @@ namespace Heritage_Zoo
 {
     class Insect : Animal
     {
-        public int amountOfWings = 2;
+        public int amountOfWings;
 
         public Insect(string name)
         {
             this.name = name;
             sound = "Bzzzzzz....!";
 
+            velocity = 75;
             amountOfLegs = 6;
             species = "Insekt";
-            uniqueInfo = UniqueInfo();
+            //uniqueInfo = UniqueInfo();
+            amountOfWings = 2;
         }
 
-        public string UniqueInfo()
+        public void UniqueInfo()
         {
-            return $"Denna insekt har {amountOfWings} stycken vingar.";
+            Console.WriteLine($"Denna insekt har {amountOfWings} stycken vingar."); 
         }
 
         public override string MakeSound(string sound)
         {
-            return base.MakeSound(sound).Replace("skriker", "låter");
-        }
+            return base.MakeSound(sound).Replace("skriker", "låter"); //Changes a word in the original method
+        }                                                             //in the animal class
     }
 }

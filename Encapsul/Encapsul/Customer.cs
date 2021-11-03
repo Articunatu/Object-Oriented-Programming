@@ -79,13 +79,25 @@ namespace Encapsul
 
         public void PrintInfo()
         {
-
-
             Console.WriteLine(EMail + "\n" +
                 FirstName + "\n" +
                 LastName + "\n" +
                 ID);
         }
+
+        public Customer(string eMail, string firstName, string lastName, int id)
+        {
+            EMail = eMail;
+            FirstName = firstName;
+            LastName = lastName;
+            ID = id;
+        }
+
+        public Customer()
+        {
+
+        }
+
 
         //public string LastName
         //{

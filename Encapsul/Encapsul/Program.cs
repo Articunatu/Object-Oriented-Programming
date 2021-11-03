@@ -6,16 +6,12 @@ namespace Encapsul
     {
         static void Main()
         {
-            Customer custom = new Customer();
-            custom.EMail = "chris.brandt@";
-            custom.FirstName = "Chris";
-            custom.LastName = "Brandt";
-            custom.ID = 4;
+            Customer custom = new Customer("chris.brandt@", "Chris", "Brandt", 4);
+
             custom.PrintInfo();
-
             Customer cus2 = new Customer();
+            cus2.ID = -7;
             cus2.PrintInfo();
-
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Heritage_Zoo
+﻿namespace Heritage_Zoo
 {
     class Program
     {
@@ -8,7 +6,7 @@ namespace Heritage_Zoo
         {
             Program obj = new Program();
             obj.ParrotCreator();
-            obj.SparrowCReator();
+            obj.SparrowCreator();
             obj.BeetleCreator();
         }
 
@@ -21,24 +19,28 @@ namespace Heritage_Zoo
                 wingSize = 4
             };            
             parrot.AnimalInfo();
+            parrot.InfoWings();
         }
 
-        public void SparrowCReator()
+        public void SparrowCreator()
         {
             Bird sparrow = new Bird("Sparv", "FUUII! FUUII!")
             {
                 wingSize = 1
             };
             sparrow.AnimalInfo();
+            sparrow.InfoWings();
         }
 
         public void BeetleCreator()
         {
             Insect beetle = new Insect("Skalbagge")
             {
-                amountOfWings = 4
-            };          
+                amountOfWings = 4,
+                move = "flyga"
+            };
             beetle.AnimalInfo();
+            beetle.UniqueInfo();
         }
     }
 }
