@@ -25,6 +25,6 @@ namespace Heritage_Zoo
         public override string MakeSound(string _sound)
         {
             return base.MakeSound(_sound).Replace("skriker", "låter"); //Changes a word in the original method
-        }                                                             //in the animal class
+        }                                                             //from the animal class
     }
 }
