@@ -9,28 +9,31 @@
             obj.SparrowCreator();
             obj.BeetleCreator();
             obj.TulpinCreator();
+            obj.NormalFrogCreator();
+            obj.PoisonArrowFrogCreator();
+            obj.FireSalamanderCreator();
         }
 
         public void ParrotCreator()
         {
-            Bird parrot = new Bird("Pappegoja", "Jag kan härma läten!")
+            Bird parrot = new Bird("Pappegoja", "Jag kan härma läten")
             {
                 height = 5,
                 isVegan = true,
                 wingSize = 4
             };            
             parrot.AnimalInfo();
-            parrot.InfoWings();
+            parrot.InfoWingSize();
         }
 
         public void SparrowCreator()
         {
-            Bird sparrow = new Bird("Sparv", "FUUII! FUUII!")
+            Bird sparrow = new Bird("Sparv", "FUUII-FUUII")
             {
                 wingSize = 1
             };
             sparrow.AnimalInfo();
-            sparrow.InfoWings();
+            sparrow.InfoWingSize();
         }
 
         public void BeetleCreator()
@@ -41,7 +44,7 @@
                 move = "flyga"
             };
             beetle.AnimalInfo();
-            beetle.UniqueInfo();
+            beetle.InfoWingAmount();
         }
 
         public void TulpinCreator()
@@ -53,6 +56,41 @@
                 height = 2
             };
             tulpin.PlantInfo();
+        }
+
+        public void NormalFrogCreator()
+        {
+            Frog normalFrog = new Frog("Vanliggroda", "Croak")
+            {
+           
+            };
+            normalFrog.AnimalInfo();
+            normalFrog.InfoSkin();
+            normalFrog.InfoJump();
+        }
+
+        public void PoisonArrowFrogCreator()
+        {
+            Frog poisonArrow = new Frog("Pilgiftsgroda", "Ribbid")
+            {
+                isToxic = true,
+                color = "Lila",
+                jumpHeight = 15
+            };
+            poisonArrow.AnimalInfo();
+            poisonArrow.InfoSkin();
+            poisonArrow.InfoJump();
+        }
+
+        public void FireSalamanderCreator()
+        {
+            Salamander fireSalamander = new Salamander("Eldsalamander", "Gwou")
+            {
+
+            };
+            fireSalamander.AnimalInfo();
+            fireSalamander.InfoSkin();
+            fireSalamander.InfoDefense();
         }
     }
 }

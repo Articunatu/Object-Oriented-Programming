@@ -8,21 +8,21 @@ namespace Heritage_Zoo
         public string species, name;
     }
 
-    class Animal: Life
+    class Animal : Life
     {               // km/h                
         public int velocity, amountOfLegs = 2;
-        public string  sound, uniqueInfo = "Unika egenskaper okända", move = "springa";
-        public bool isVegan, isWild;
+        public string sound, uniqueInfo = "Unika egenskaper okända", move = "springa";
+        public bool isVegan;
 
         public Animal()
         {
 
         }
-        
-        public virtual string MakeSound(string sound)
+
+        public virtual string MakeSound(string _sound)
         {
-            this.sound = sound;
-            return "En " + name.ToLower() + " skriker: " + sound.ToUpper();
+            this.sound = _sound;
+            return "En " + name.ToLower() + " skriker: " + _sound.ToUpper() + "!";
         }
 
         public string Movement()
@@ -36,12 +36,12 @@ namespace Heritage_Zoo
             Console.WriteLine("Artnamn: " + name +
                             "\nDjurart: " + species +
                             "\nÄter: " + veganInfo +
-                            "\nLängd: " + height +" dm" +
-                            "\nDen har " + amountOfLegs + " stycken ben"+
+                            "\nLängd: " + height + " dm" +
+                            "\nDen har " + amountOfLegs + " stycken ben" +
                             //"\n" + uniqueInfo +
                             "\n" + Movement() +
                             "\n" + MakeSound(sound));
-        }      
+        }
     }
 
     class Plant : Life
@@ -49,10 +49,10 @@ namespace Heritage_Zoo
         public int amountOfLeaves;
         public string petalColor;
 
-        public Plant(string name, string species)
+        public Plant(string _name, string _species)
         {
-            base.name = name;
-            base.species = species;
+            base.name = _name;
+            base.species = _species;
         }
 
         public void PlantInfo()
@@ -62,7 +62,7 @@ namespace Heritage_Zoo
                             "\nLängd: " + height + " dm" +
 
                             "\nDen har " + amountOfLeaves + " stycken löv" +
-                            "\nDess blomblad har färgen " + petalColor);
+                            "\nDess blomblad har färgen " + petalColor.ToLower()+"\n\n");
         }
     }
 }

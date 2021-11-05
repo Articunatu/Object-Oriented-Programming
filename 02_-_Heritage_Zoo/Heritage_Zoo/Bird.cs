@@ -7,10 +7,10 @@ namespace Heritage_Zoo
         public int wingSize;
 
         //Contructor with default values
-        public Bird(string name, string sound)
+        public Bird(string _name, string _sound)
         {
-            base.name = name;
-            base.sound = sound;
+            base.name = _name;
+            base.sound = _sound;
             move = "flyga";
             velocity = 150;
             height = 2;
@@ -25,7 +25,7 @@ namespace Heritage_Zoo
 
         }
 
-        public void InfoWings()
+        public void InfoWingSize()
         {
             Console.WriteLine($"Storleken på dess vingar är {wingSize} cm\n\n");
         }

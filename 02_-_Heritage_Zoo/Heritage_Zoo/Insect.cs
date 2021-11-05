@@ -5,10 +5,9 @@ namespace Heritage_Zoo
     class Insect : Animal
     {
         public int amountOfWings;
-
-        public Insect(string name)
+        public Insect(string _name)
         {
-            this.name = name;
+            this.name = _name;
             sound = "Bzzzzzz....!";
 
             velocity = 75;
@@ -18,14 +17,14 @@ namespace Heritage_Zoo
             amountOfWings = 2;
         }
 
-        public void UniqueInfo()
+        public void InfoWingAmount()
         {
             Console.WriteLine($"Denna insekt har {amountOfWings} stycken vingar.\n\n"); 
         }
 
-        public override string MakeSound(string sound)
+        public override string MakeSound(string _sound)
         {
-            return base.MakeSound(sound).Replace("skriker", "låter"); //Changes a word in the original method
+            return base.MakeSound(_sound).Replace("skriker", "låter"); //Changes a word in the original method
         }                                                             //in the animal class
     }
 }
