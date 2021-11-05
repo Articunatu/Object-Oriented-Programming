@@ -8,10 +8,11 @@
             obj.ParrotCreator();
             obj.SparrowCreator();
             obj.BeetleCreator();
+            obj.CowCreator();
             obj.TulpinCreator();
             obj.NormalFrogCreator();
             obj.PoisonArrowFrogCreator();
-            obj.FireSalamanderCreator();
+            obj.FireSalamanderCreator();         
         }
 
         public void ParrotCreator()
@@ -28,7 +29,7 @@
 
         public void SparrowCreator()
         {
-            Bird sparrow = new Bird("Sparv", "FUUII-FUUII")
+            Bird sparrow = new Bird("Sparv", "Fuuii-fuuii")
             {
                 wingSize = 1
             };
@@ -91,6 +92,20 @@
             fireSalamander.AnimalInfo();
             fireSalamander.InfoSkin();
             fireSalamander.InfoDefense();
+        }
+
+        public void CowCreator()
+        {
+            Animal cow = new Animal()
+            {
+                sound = "Muu",
+                name = "Ko",
+                height = 20,
+                isVegan = true,
+                velocity = 3,
+                species = "Hovdjur"
+            };
+            cow.AnimalInfo();
         }
     }
 }

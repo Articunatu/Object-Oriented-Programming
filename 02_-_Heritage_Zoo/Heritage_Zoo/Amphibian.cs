@@ -13,6 +13,7 @@ namespace Heritage_Zoo
         {
             color = "Grönt";
             species = "Groddjur";
+            velocity = 10;
         }
 
         public void InfoSkin()

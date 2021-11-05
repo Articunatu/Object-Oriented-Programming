@@ -11,7 +11,7 @@ namespace Heritage_Zoo
     class Animal : Life
     {               // km/h                
         public int velocity, amountOfLegs = 2;
-        public string sound, uniqueInfo = "Unika egenskaper okända", move = "springa";
+        public string sound, move = "röra sig framåt";
         public bool isVegan;
 
         public Animal()
@@ -38,7 +38,6 @@ namespace Heritage_Zoo
                             "\nÄter: " + veganInfo +
                             "\nLängd: " + height + " dm" +
                             "\nDen har " + amountOfLegs + " stycken ben" +
-                            //"\n" + uniqueInfo +
                             "\n" + Movement() +
                             "\n" + MakeSound(sound));
         }
