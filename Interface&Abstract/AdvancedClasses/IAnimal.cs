@@ -14,7 +14,7 @@ namespace AdvancedClasses
     public class Bird : IAnimal
     {
         public int length { get ; set ; }
-        public string name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string name { get; set; }
 
         void IAnimal.FoodDigestion()
         {
@@ -39,9 +39,9 @@ namespace AdvancedClasses
     public class Frog : IAnimal
     {
         public int length { get; set; }
-        public string name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string name { get; set; }
 
-        
+
 
         public void FoodDigestion()
         {
