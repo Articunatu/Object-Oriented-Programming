@@ -29,22 +29,13 @@ namespace DictionariesTest
             string answer = Console.ReadLine();
 
             Country ansCou = _countries.Find(A => A.code.Contains(answer));
-            if (ansCou == null)
-            {
-                Console.WriteLine("\nLandskoden är ej giltig.\n");
-            }
-            else
-            {
-                Console.WriteLine("\nDu har valt " +ansCou.Name+"\n");
-            }
-
-            Console.WriteLine("Vill du skriva in fler länder? Skriv isåfall JA ");
+            string validationMessage = (ansCou == null) ? "\nLandskoden är ej giltig.\n" :
+                                                        "\nDu har valt " + ansCou.Name + "\n";
+            Console.WriteLine(validationMessage +
+                             "\nVill du skriva in fler länder? Skriv isåfall JA \n");
 
             string binaryAnswer = Console.ReadLine();
-            if (binaryAnswer.ToUpper() == "JA")
-            {
-                AskUser(_countries);
-            }
+            if (binaryAnswer.ToUpper() == "JA") { AskUser(_countries); }
         }
 
         static void PrintQueue()
