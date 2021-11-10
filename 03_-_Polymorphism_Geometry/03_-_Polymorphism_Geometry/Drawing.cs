@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace _03___Polymorphism_Geometry
 {
     class Drawing
     {
+        public string geoName { get; set; }
         public virtual double Area()
         {
             return 0;
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Denna {geoName} har en area på {Area()} kvadratcentimeter.\n");
         }
     }
 
@@ -18,12 +22,13 @@ namespace _03___Polymorphism_Geometry
 
         public Circle()
         {
+            geoName = "cirkel";
             radius = 4;
         }
 
         public override double Area()
         {
-            return radius * 3.14;
+            return Math.Round(radius * 3.14, 2);
         }
     }
     class Rectangle : Drawing
@@ -33,6 +38,7 @@ namespace _03___Polymorphism_Geometry
 
         public Rectangle()
         {
+            geoName = "rektangel";
             height = 4;
             witdth = 5;
         }
@@ -50,13 +56,14 @@ namespace _03___Polymorphism_Geometry
 
         public Triangle()
         {
+            geoName = "triangel";
             height = 7;
             triBase = 3;
         }
 
         public override double Area()
         {
-            return (height * triBase)/2;
+            return Math.Round((height * triBase)/2);
         }
     }
 }
