@@ -8,31 +8,67 @@ namespace DictionariesTest
     {
         static void Main(string[] args)
         {
-            
+
             //PrintDictionary();
-            TGVPrint();           
+            //TGVPrint();      
+            PrintQueue();
+        }
+
+        static void PrintQueue()
+        {
+            FrontierBrain f1 = new FrontierBrain() { id = 119, name = "Tucker", gender = "Male", salary = 75000 };
+            FrontierBrain f2 = new FrontierBrain() { id = 121, name = "Nolan", gender = "Male", salary = 56000 };
+            FrontierBrain f3 = new FrontierBrain() { id = 127, name = "Brandon", gender = "Male", salary = 99000 };
+            FrontierBrain f4 = new FrontierBrain() { id = 133, name = "Lucy", gender = "Female", salary = 71000 };
+            FrontierBrain f5 = new FrontierBrain() { id = 138, name = "Greta", gender = "Female", salary = 62000 };
+
+            Queue<FrontierBrain> FronQue = new Queue<FrontierBrain>();
+            FronQue.Enqueue(f1);
+            FronQue.Enqueue(f2);
+            FronQue.Enqueue(f3);
+            FronQue.Enqueue(f4);
+            FronQue.Enqueue(f5);
+
+            //FrontierBrain fdq = FronQue.Dequeue();
+            //fdq.PrintInfo();
+            //Console.WriteLine("Antal ledare i queuen = " + FronQue.Count);
+
+            //FrontierBrain fdq2 = FronQue.Dequeue();
+            //fdq2.PrintInfo();
+            //Console.WriteLine("Antal ledare i queuen = " + FronQue.Count);
+
+            FrontierBrain pfb1 = FronQue.Peek();
+            pfb1.PrintInfo();
+            Console.WriteLine("Antal ledare i queuen är: " + FronQue.Count);
+
+            FrontierBrain pfb2 = FronQue.Peek();
+            pfb2.PrintInfo();
+            Console.WriteLine("Antal ledare i queuen är: " + FronQue.Count +"\n");
+
+            string printContain = FronQue.Contains(f3) ? "Ledaren finns med" : "Ingen ledare vid det namn finns";
+            Console.WriteLine(printContain);
         }
 
         static void TGVPrint()
         {
-            Student s1 = new Student() { id = 119, name = "Tucker", gender = "Male", salary = 75000 };
-            Student s2 = new Student() { id = 121, name = "Nolan", gender = "Male", salary = 56000 };
-            Student s3 = new Student() { id = 127, name = "Brandon", gender = "Male", salary = 99000 };
-            Student s4 = new Student() { id = 133, name = "Lucy", gender = "Female", salary = 71000 };
-            Student s5 = new Student() { id = 138, name = "Greta", gender = "Female", salary = 62000 };
+            FrontierBrain s1 = new FrontierBrain() { id = 119, name = "Tucker", gender = "Male", salary = 75000 };
+            FrontierBrain s2 = new FrontierBrain() { id = 121, name = "Nolan", gender = "Male", salary = 56000 };
+            FrontierBrain s3 = new FrontierBrain() { id = 127, name = "Brandon", gender = "Male", salary = 99000 };
+            FrontierBrain s4 = new FrontierBrain() { id = 133, name = "Lucy", gender = "Female", salary = 71000 };
+            FrontierBrain s5 = new FrontierBrain() { id = 138, name = "Greta", gender = "Female", salary = 62000 };
 
-            Dictionary<int, Student> students = new Dictionary<int, Student>()
+            Dictionary<int, FrontierBrain> frontierBrains = new Dictionary<int, FrontierBrain>()
             { };
 
-            students.Add(s1.id, s1);
-            students.Add(s2.id, s2);
-            students.Add(s3.id, s3);
-            students.Add(s4.id, s4);
-            students.Add(s5.id, s5);
+            frontierBrains.Add(s1.id, s1);
+            frontierBrains.Add(s2.id, s2);
+            frontierBrains.Add(s3.id, s3);
+            frontierBrains.Add(s4.id, s4);
+            frontierBrains.Add(s5.id, s5);
 
-            Student st;
+            FrontierBrain st;
 
-            if (students.TryGetValue(119, out st))
+            if (frontierBrains.TryGetValue(119, out st))
             {
                 Console.WriteLine("Ett objekt där id:et är {0} finns ", st.id);
             }
@@ -42,12 +78,15 @@ namespace DictionariesTest
             }
 
             //students.Clear();
-            Console.WriteLine("Antalet studenter är " + students.Count + " stycken.\n");
+            Console.WriteLine("Antalet studenter är " + frontierBrains.Count + " stycken.\n");
 
-            foreach (KeyValuePair<int, Student> student in students)
+            foreach (KeyValuePair<int, FrontierBrain> frontierBrain in frontierBrains)
             {
-                student.Value.PrintInfo();
+                frontierBrain.Value.PrintInfo();
             }
+
+            ///Overload count
+            Console.WriteLine("Frontier Brains som tjänar mer än 70000 är i antal: " + frontierBrains.Count(k => k.Value.salary > 70000));
 
             ///Array to dictionary
             //Student[] arrayStudents = new Student[5];
