@@ -15,7 +15,7 @@ namespace DictionariesTest
             Country brazil = new Country("BRASILIEN", "Brasíl", "BRA");
 
             List<Country> countries = new List<Country>();
-            countries.Add(china);countries.Add(india);countries.Add(usa);countries.Add(russia);countries.Add(brazil);
+            countries.Add(china); countries.Add(india); countries.Add(usa); countries.Add(russia); countries.Add(brazil);
             AskUser(countries);
 
             //PrintDictionary();
@@ -28,9 +28,9 @@ namespace DictionariesTest
             Console.WriteLine("Skriv in en tre-siffrig kod för att hitta ett land:\n");
             string answer = Console.ReadLine();
 
-            Country ansCou = _countries.Find(A => A.code.Contains(answer));
-            string validationMessage = (ansCou == null) ? "\nLandskoden är ej giltig.\n" :
-                                                          "\nDu har valt " + ansCou.name + "\n";
+            Country resultCountry = _countries.Find(A => A.code.Contains(answer));
+            string validationMessage = (resultCountry == null) ? "\nLandskoden är ej giltig.\n" :
+                                                                 "\nDu har valt landet " + resultCountry.name + "vars huvudstad heter "+ resultCountry.capital+ "\n";
             Console.WriteLine(validationMessage +
                              "\nVill du skriva in fler länder? Skriv isåfall JA \n");
 

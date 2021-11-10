@@ -37,9 +37,9 @@ namespace _04___Collection_Generics
             }
 
             Console.WriteLine("****************************" +
-                "\nRetrieve using Pop Method");
+                "\nRetrieve using Pop Method\n");
 
-            Stack backupEmployees = new Stack(); //Foreach loop won't work if the amount in the list changes
+            Stack backupEmployees = new Stack(); //Foreach loop won't work if the amount in the list it's checking changes
             foreach (Employee employee in stackedEmployees)//A backup is needed to keep count of the original amount
             {
                 backupEmployees.Push(employee);
@@ -58,7 +58,7 @@ namespace _04___Collection_Generics
             }
 
             Console.WriteLine("****************************" +
-                "\nRetrieve using Peek Method");
+                "\nRetrieve using Peek Method\n");
 
             foreach (Employee employee in stackedEmployees)
             {
