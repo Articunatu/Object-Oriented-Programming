@@ -39,7 +39,7 @@ namespace _04___Collection_Generics
             Console.WriteLine("****************************" +
                 "\nRetrieve using Pop Method\n");
 
-            Stack backupEmployees = new Stack(); //Foreach loop won't work if the amount in the list it's checking changes
+            Stack backupEmployees = new Stack(); //Foreach loop won't work if the amount of objects in the stack (that the loop is checking) changes.
             foreach (Employee employee in stackedEmployees)//A backup is needed to keep count of the original amount
             {
                 backupEmployees.Push(employee);
