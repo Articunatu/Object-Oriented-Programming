@@ -30,7 +30,7 @@ namespace DictionariesTest
 
             Country ansCou = _countries.Find(A => A.code.Contains(answer));
             string validationMessage = (ansCou == null) ? "\nLandskoden är ej giltig.\n" :
-                                                        "\nDu har valt " + ansCou.Name + "\n";
+                                                          "\nDu har valt " + ansCou.name + "\n";
             Console.WriteLine(validationMessage +
                              "\nVill du skriva in fler länder? Skriv isåfall JA \n");
 
