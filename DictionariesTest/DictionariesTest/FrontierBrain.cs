@@ -2,7 +2,7 @@
 
 namespace DictionariesTest
 {
-    class FrontierBrain
+    class FrontierBrain 
     {
 
         public int id { get; set; }

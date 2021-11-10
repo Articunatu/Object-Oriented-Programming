@@ -6,12 +6,45 @@ namespace DictionariesTest
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Country china = new Country("Kina", "Beijing", "KIN");
+            Country india = new Country("Indien", "New Dehli", "IND");
+            Country usa = new Country("Förenta Staterna", "Washington", "USA");
+            Country russia = new Country("Ryssland", "Moskva", "RYS");
+            Country brazil = new Country("Brasilien", "Brasíl", "BRA");
+
+            List<Country> countries = new List<Country>();
+            countries.Add(china);countries.Add(india);countries.Add(usa);countries.Add(russia);countries.Add(brazil);
+            AskUser(countries);
 
             //PrintDictionary();
             //TGVPrint();      
-            PrintQueue();
+            //PrintQueue();
+        }
+
+        static void AskUser(List<Country> _countries)
+        {
+            Console.WriteLine("Skriv in en tre-siffrig kod för att hitta ett land:");
+            string answer = Console.ReadLine();
+
+            Country ansCou = _countries.Find(A => A.code.Contains(answer));
+            if (ansCou == null)
+            {
+                Console.WriteLine("\nLandskoden är ej giltig.\n");
+            }
+            else
+            {
+                Console.WriteLine("\nDu har valt " +ansCou.Name+"\n");
+            }
+
+            Console.WriteLine("Vill du skriva in fler länder? Skriv isåfall JA ");
+
+            string binaryAnswer = Console.ReadLine();
+            if (binaryAnswer.ToUpper() == "JA")
+            {
+                AskUser(_countries);
+            }
         }
 
         static void PrintQueue()
@@ -57,8 +90,7 @@ namespace DictionariesTest
             FrontierBrain s4 = new FrontierBrain() { id = 133, name = "Lucy", gender = "Female", salary = 71000 };
             FrontierBrain s5 = new FrontierBrain() { id = 138, name = "Greta", gender = "Female", salary = 62000 };
 
-            Dictionary<int, FrontierBrain> frontierBrains = new Dictionary<int, FrontierBrain>()
-            { };
+            Dictionary<int, FrontierBrain> frontierBrains = new Dictionary<int, FrontierBrain>();
 
             frontierBrains.Add(s1.id, s1);
             frontierBrains.Add(s2.id, s2);

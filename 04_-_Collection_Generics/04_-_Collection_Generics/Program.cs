@@ -39,17 +39,17 @@ namespace _04___Collection_Generics
             Console.WriteLine("****************************" +
                 "\nRetrieve using Pop Method");
 
-            Stack backupEmployees = new Stack();
-            foreach (Employee employee in stackedEmployees)
+            Stack backupEmployees = new Stack(); //Foreach loop won't work if the amount in the list changes
+            foreach (Employee employee in stackedEmployees)//A backup is needed to keep count of the original amount
             {
                 backupEmployees.Push(employee);
             }
 
-            foreach (Employee employee in stackedEmployees)
+            foreach (Employee employee in backupEmployees)
             {
                 employee.PrintEmployeeInfo();
-                backupEmployees.Pop();
-                Console.WriteLine("Items left in the stack: " + backupEmployees.Count);
+                stackedEmployees.Pop();
+                Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
             }
 
             foreach (Employee employee in backupEmployees)
@@ -69,7 +69,7 @@ namespace _04___Collection_Generics
 
             Console.WriteLine("****************************");
 
-            string hasThirdEmployee = stackedEmployees.Contains(empo3) ? "Emp3 is in stack" : "Emp3 is NO in stack";
+            string hasThirdEmployee = stackedEmployees.Contains(empo3) ? "Emp3 is in stack" : "Emp3 is NOT in stack";
             Console.WriteLine(hasThirdEmployee);
 
             PrintList(empo1, empo2, empo3, empo4, empo5);

@@ -4,7 +4,7 @@ namespace _03___Polymorphism_Geometry
 {
     class Drawing
     {
-        public string geoName { get; set; }
+        public string geometryName { get; set; }
         public virtual double Area()
         {
             return 0;
@@ -12,7 +12,7 @@ namespace _03___Polymorphism_Geometry
 
         public void PrintInfo()
         {
-            Console.WriteLine($"Denna {geoName} har en area på {Area()} kvadratcentimeter.\n");
+            Console.WriteLine($"Denna {geometryName} har en area på {Area()} kvadratcentimeter.\n");
         }
     }
 
@@ -22,7 +22,7 @@ namespace _03___Polymorphism_Geometry
 
         public Circle()
         {
-            geoName = "cirkel";
+            geometryName = "cirkel";
             radius = 4;
         }
 
@@ -38,7 +38,7 @@ namespace _03___Polymorphism_Geometry
 
         public Rectangle()
         {
-            geoName = "rektangel";
+            geometryName = "rektangel";
             height = 4;
             witdth = 5;
         }
@@ -56,7 +56,7 @@ namespace _03___Polymorphism_Geometry
 
         public Triangle()
         {
-            geoName = "triangel";
+            geometryName = "triangel";
             height = 7;
             triBase = 3;
         }
