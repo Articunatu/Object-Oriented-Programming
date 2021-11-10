@@ -45,16 +45,16 @@ namespace _04___Collection_Generics
                 backupEmployees.Push(employee);
             }
 
-            foreach (Employee employee in backupEmployees)
+            foreach (Employee employee in stackedEmployees)
             {
                 employee.PrintEmployeeInfo();
-                stackedEmployees.Pop();
-                Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+                backupEmployees.Pop();
+                Console.WriteLine("Items left in the stack: " + backupEmployees.Count);
             }
 
-            foreach (Employee employee in backupEmployees)
+            foreach (Employee employee in stackedEmployees)
             {
-                stackedEmployees.Push(employee);
+                backupEmployees.Push(employee);
             }
 
             Console.WriteLine("****************************" +
