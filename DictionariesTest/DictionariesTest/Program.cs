@@ -8,11 +8,11 @@ namespace DictionariesTest
     {
         static void Main()
         {
-            Country china = new Country("Kina", "Beijing", "KIN");
-            Country india = new Country("Indien", "New Dehli", "IND");
-            Country usa = new Country("Förenta Staterna", "Washington", "USA");
-            Country russia = new Country("Ryssland", "Moskva", "RYS");
-            Country brazil = new Country("Brasilien", "Brasíl", "BRA");
+            Country china  = new Country("KINA", "Beijing", "KIN");
+            Country india  = new Country("INDIEN", "New Dehli", "IND");
+            Country usa    = new Country("FÖRENTA STATERNA", "Washington", "USA");
+            Country russia = new Country("RYSSLAND", "Moskva", "RYS");
+            Country brazil = new Country("BRASILIEN", "Brasíl", "BRA");
 
             List<Country> countries = new List<Country>();
             countries.Add(china);countries.Add(india);countries.Add(usa);countries.Add(russia);countries.Add(brazil);
@@ -25,7 +25,7 @@ namespace DictionariesTest
 
         static void AskUser(List<Country> _countries)
         {
-            Console.WriteLine("Skriv in en tre-siffrig kod för att hitta ett land:");
+            Console.WriteLine("Skriv in en tre-siffrig kod för att hitta ett land:\n");
             string answer = Console.ReadLine();
 
             Country ansCou = _countries.Find(A => A.code.Contains(answer));
@@ -34,7 +34,7 @@ namespace DictionariesTest
             Console.WriteLine(validationMessage +
                              "\nVill du skriva in fler länder? Skriv isåfall JA \n");
 
-            string binaryAnswer = Console.ReadLine();
+            string binaryAnswer = Console.ReadLine() + "\n";
             if (binaryAnswer.ToUpper() == "JA") { AskUser(_countries); }
         }
 
