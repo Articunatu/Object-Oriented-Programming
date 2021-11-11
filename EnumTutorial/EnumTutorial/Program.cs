@@ -2,21 +2,28 @@
 
 namespace EnumTutorial
 {
+    public enum WeekDays
+    {
+        sunday = 1,
+        monday,
+        tuesday = 1,
+        wednesday,
+        thursday = 2,
+        friday,
+        saturday
+
+    }
+
     class Program
     {
-        public enum WeekDays
+        static void Main()
         {
-            sunday = 1,
-            monday,
-            tuesday = 1, 
-            wednesday,
-            thursday = 2,
-            friday,
-            saturday
-            
+            Student S1 = new Student() { ID = 201, Name = "Dawn", gender = Gender.Female };
+            Student S2 = new Student() { ID = 215, Name = "Volkner", gender = Gender.Male };
+            Student S3 = new Student() { ID = 226, Name = "Lucian", gender = Gender.Other };
         }
 
-        static void Main()
+        static void PrintWeekDays()
         {
             Console.WriteLine("Day of the week {0} {1}", (int)WeekDays.tuesday, WeekDays.tuesday);
             string[] values = Enum.GetNames(typeof(WeekDays));
@@ -43,5 +50,12 @@ namespace EnumTutorial
                 Console.WriteLine(item);
             }
         }
+    }
+
+    public enum Gender
+    {
+        Male,
+        Female,
+        Other
     }
 }
