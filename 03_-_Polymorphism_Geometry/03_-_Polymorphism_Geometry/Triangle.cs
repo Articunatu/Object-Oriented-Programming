@@ -16,7 +16,7 @@ namespace _03___Polymorphism_Geometry
 
         public override double Area()
         {
-            return Math.Round((height * triBase) / 2);
+            return Math.Round((height * triBase) / 2, 1);
         }
     }
 }
