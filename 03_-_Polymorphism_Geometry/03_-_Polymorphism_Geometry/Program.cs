@@ -6,14 +6,14 @@
         {
             Circle circ1 = new Circle() 
             { 
-                radius = 12
+                Radius = 12
             };
             circ1.PrintInfo();
 
             Rectangle rect1 = new Rectangle()
             {
-                height = 7,
-                witdth = 8
+                Height = 7,
+                Width = 8
             };
             rect1.PrintInfo();
 

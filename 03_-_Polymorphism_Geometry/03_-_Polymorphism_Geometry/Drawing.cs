@@ -4,7 +4,7 @@ namespace _03___Polymorphism_Geometry
 {
     class Drawing
     {
-        public string geometryName { get; set; }
+        public string GeometryName { get; set; }
         public virtual double Area()
         {
             return 0;
@@ -12,7 +12,7 @@ namespace _03___Polymorphism_Geometry
 
         public void PrintInfo()
         {
-            Console.WriteLine($"Denna {geometryName} har en area på {Area()} kvadratcentimeter.\n");
+            Console.WriteLine($"Denna {GeometryName} har en area på {Area()} kvadratcentimeter.\n");
         }
     }
 }

@@ -4,19 +4,19 @@ namespace _03___Polymorphism_Geometry
 {
     class Triangle : Drawing
     {
-        public double triBase { get; set; }
-        public double height { get; set; }
+        public double TriBase { get; set; }
+        public double Height { get; set; }
 
         public Triangle()
         {
-            geometryName = "triangel";
-            height = 7;
-            triBase = 3;
+            GeometryName = "triangel";
+            Height = 7;
+            TriBase = 3;
         }
 
         public override double Area()
         {
-            return Math.Round((height * triBase) / 2, 1);
+            return Math.Round((Height * TriBase) / 2, 2);
         }
     }
 }

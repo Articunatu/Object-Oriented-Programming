@@ -1,20 +1,22 @@
-﻿namespace _03___Polymorphism_Geometry
+﻿using System;
+
+namespace _03___Polymorphism_Geometry
 {
     class Rectangle : Drawing
     {
-        public double height { get; set; }
-        public double witdth { get; set; }
+        public double Height { get; set; }
+        public double Width { get; set; }
 
         public Rectangle()
         {
-            geometryName = "rektangel";
-            height = 4;
-            witdth = 5;
+            GeometryName = "rektangel";
+            Height = 4;
+            Width = 5;
         }
 
         public override double Area()
         {
-            return height * witdth;
+            return Math.Round(Height * Width, 2);
         }
     }
 }

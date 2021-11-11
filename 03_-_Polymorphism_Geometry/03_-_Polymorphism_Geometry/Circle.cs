@@ -4,17 +4,17 @@ namespace _03___Polymorphism_Geometry
 {
     class Circle : Drawing
     {
-        public double radius { get; set; }
+        public double Radius { get; set; }
 
         public Circle()
         {
-            geometryName = "cirkel";
-            radius = 4;
+            GeometryName = "cirkel";
+            Radius = 4;
         }
 
         public override double Area()
         {
-            return Math.Round(radius * 3.14, 2);
+            return Math.Round(Radius * 3.14, 2);
         }
     }
 }
