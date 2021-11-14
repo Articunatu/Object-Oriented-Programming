@@ -20,11 +20,6 @@ namespace Heritage_Zoo
             wingSize = 1;
         }
 
-        public Bird()
-        {
-
-        }
-
         public void InfoWingSize()
         {
             Console.WriteLine($"Storleken på dess vingar är {wingSize} cm\n\n");
