@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace _04___Collection_Generics
@@ -15,6 +14,7 @@ namespace _04___Collection_Generics
         {
             Console.WriteLine("\nPART 1 - STACK\n");
             Console.WriteLine("****************************");
+            Console.WriteLine("Retrieve using Push Method");
 
             Employee empo1 = new Employee(101, "Brendan", "Male", 38000);
             Employee empo2 = new Employee(104, "May", "Female", 43000);
@@ -22,7 +22,7 @@ namespace _04___Collection_Generics
             Employee empo4 = new Employee(111, "Anabel", "Female", 49994);
             Employee empo5 = new Employee(113, "Zinnia", "Female", 75);
 
-            Stack stackedEmployees = new Stack();
+            Stack<Employee> stackedEmployees = new Stack<Employee>();
 
             stackedEmployees.Push(empo1);
             stackedEmployees.Push(empo2);
@@ -37,35 +37,56 @@ namespace _04___Collection_Generics
             }
 
             Console.WriteLine("****************************" +
-                "\nRetrieve using Pop Method\n");
+                "\nRetrieve using Pop Method");
 
-            Stack backupEmployees = new Stack(); //Foreach loop won't work if the amount of objects in the stack (that the loop is checking) changes.
-            foreach (Employee employee in stackedEmployees)//A backup is needed to keep count of the original amount
-            {
-                backupEmployees.Push(employee);
-            }
+            Employee employee1 = stackedEmployees.Pop();
+            employee1.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
-            foreach (Employee employee in stackedEmployees)
-            {
-                employee.PrintEmployeeInfo();
-                backupEmployees.Pop();
-                Console.WriteLine("Items left in the stack: " + backupEmployees.Count);
-            }
+            Employee employee2 = stackedEmployees.Pop();
+            employee2.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
-            foreach (Employee employee in stackedEmployees)
-            {
-                backupEmployees.Push(employee);
-            }
+            Employee employee3 = stackedEmployees.Pop();
+            employee3.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            Employee employee4 = stackedEmployees.Pop();
+            employee4.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            Employee employee5 = stackedEmployees.Pop();
+            employee5.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            stackedEmployees.Push(empo1);
+            stackedEmployees.Push(empo2);
+            stackedEmployees.Push(empo3);
+            stackedEmployees.Push(empo4);
+            stackedEmployees.Push(empo5);
 
             Console.WriteLine("****************************" +
-                "\nRetrieve using Peek Method\n");
+                "\nRetrieve using Peek Method");
 
-            foreach (Employee employee in stackedEmployees)
-            {
-                employee.PrintEmployeeInfo();
-                stackedEmployees.Peek();
-                Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
-            }
+            employee1 = stackedEmployees.Peek();
+            employee5.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            employee2 = stackedEmployees.Peek();
+            employee5.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            employee3 = stackedEmployees.Peek();
+            employee5.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            employee4 = stackedEmployees.Peek();
+            employee5.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
+
+            employee5 = stackedEmployees.Peek();
+            employee5.PrintEmployeeInfo();
+            Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
             Console.WriteLine("****************************");
 
