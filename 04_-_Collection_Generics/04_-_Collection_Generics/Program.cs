@@ -69,19 +69,19 @@ namespace _04___Collection_Generics
                 "\nRetrieve using Peek Method");
 
             employee1 = stackedEmployees.Peek();
-            employee5.PrintEmployeeInfo();
+            employee1.PrintEmployeeInfo();
             Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
             employee2 = stackedEmployees.Peek();
-            employee5.PrintEmployeeInfo();
+            employee2.PrintEmployeeInfo();
             Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
             employee3 = stackedEmployees.Peek();
-            employee5.PrintEmployeeInfo();
+            employee3.PrintEmployeeInfo();
             Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
             employee4 = stackedEmployees.Peek();
-            employee5.PrintEmployeeInfo();
+            employee4.PrintEmployeeInfo();
             Console.WriteLine("Items left in the stack: " + stackedEmployees.Count);
 
             employee5 = stackedEmployees.Peek();
@@ -114,16 +114,16 @@ namespace _04___Collection_Generics
             Console.WriteLine(hasEmpo2);
             Console.WriteLine("****************************");
 
-            Console.WriteLine("The first male employee in the list is:");
+            Console.WriteLine("The first male employee in this list is:");
             Employee firstMaleEmployee = listedEmployees.Find(A => A.gender.Equals("Male"));
-            firstMaleEmployee.PrintEmployeeInfo();
+            firstMaleEmployee.PrintEmployeeInfo2();
             Console.WriteLine("****************************");
 
-            Console.WriteLine("The  male employees in the list are:");
+            Console.WriteLine("The male employees in this list are:");
             List<Employee> maleEmployees = listedEmployees.FindAll(A => A.gender.Equals("Male"));
             foreach (Employee maleEmployee in maleEmployees)
             {
-                maleEmployee.PrintEmployeeInfo();
+                maleEmployee.PrintEmployeeInfo2();
             }
         }
     }

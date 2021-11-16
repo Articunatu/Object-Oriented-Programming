@@ -22,5 +22,10 @@ namespace _04___Collection_Generics
                           gender + " " +
                           salary + "\n");
         }
+
+        public void PrintEmployeeInfo2()
+        {
+            Console.Write($"ID = {id}, Name = {name}, Gender = {gender}, Salary = {salary}\n");
+        }
     }
 }
