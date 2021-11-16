@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heritage_Zoo", "Heritage_Zoo\Heritage_Zoo.csproj", "{D1231DD3-1561-4A40-A726-E6BE159FEA31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_Zoo", "Heritage_Zoo\Inheritance_Zoo.csproj", "{D1231DD3-1561-4A40-A726-E6BE159FEA31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

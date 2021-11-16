@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Heritage_Zoo
+namespace Inheritance_Zoo
 {
     class Bird : Animal
     {              //dm

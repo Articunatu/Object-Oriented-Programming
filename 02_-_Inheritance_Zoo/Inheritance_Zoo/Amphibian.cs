@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Heritage_Zoo
+namespace Inheritance_Zoo
 {
     class Amphibian : Animal
     {
