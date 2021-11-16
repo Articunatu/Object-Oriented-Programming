@@ -36,6 +36,17 @@ namespace Heritage_Zoo
             speciesClass = "Groda";
         }
 
+        public Frog()
+        {
+            name = "Vanlig groda";
+            sound = "Croak";
+            isToxic = false;
+            height = 2;
+
+            jumpHeight = 20; //meter
+            speciesClass = "Groda";
+        }
+
         public void InfoJump()
         {
             Console.WriteLine("Gruppering: " + speciesClass + 
@@ -51,6 +62,19 @@ namespace Heritage_Zoo
         {
             base.name = _name;
             base.sound = _sound;
+            color = "Svart med gula prickar";
+            isToxic = true;
+            isVegan = false;
+            height = 4;
+
+            tailStrength = 10;
+            speciesClass = "Salamander";
+        }
+
+        public Salamander()
+        {
+            name = "Vanlig salamander";
+            sound = "Ssssss";
             color = "Svart med gula prickar";
             isToxic = true;
             isVegan = false;

@@ -22,7 +22,15 @@ namespace Heritage_Zoo
 
         public Bird()
         {
-
+            name = "Vanlig fågel";
+            sound = "Uiuiui";
+            move = "flyga";
+            velocity = 150;
+            height = 2;
+            isVegan = false;
+            species = "Fågel";
+            //uniqueInfo = UniqueInfo();
+            wingSize = 1;
         }
 
         public void InfoWingSize()

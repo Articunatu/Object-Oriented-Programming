@@ -5,6 +5,7 @@ namespace Heritage_Zoo
     class Insect : Animal
     {
         public int amountOfWings;
+
         public Insect(string _name)
         {
             this.name = _name;
@@ -16,6 +17,19 @@ namespace Heritage_Zoo
             //uniqueInfo = UniqueInfo();
             amountOfWings = 2;
         }
+
+        public Insect()
+        {
+            name = "Vanlig insekt";
+            sound = "Bzzzzzz....!";
+
+            velocity = 75;
+            amountOfLegs = 6;
+            species = "Insekt";
+            //uniqueInfo = UniqueInfo();
+            amountOfWings = 2;
+        }
+
 
         public void InfoWingAmount()
         {
