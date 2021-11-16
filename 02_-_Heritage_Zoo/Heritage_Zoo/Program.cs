@@ -1,4 +1,4 @@
-﻿namespace Inheritance_Zoo
+﻿namespace Heritage_Zoo
 {
     class Program
     {

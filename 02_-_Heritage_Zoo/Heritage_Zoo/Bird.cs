@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Inheritance_Zoo
+namespace Heritage_Zoo
 {
     class Bird : Animal
     {              //dm
@@ -18,6 +18,11 @@ namespace Inheritance_Zoo
             species = "Fågel";        
             //uniqueInfo = UniqueInfo();
             wingSize = 1;
+        }
+
+        public Bird()
+        {
+
         }
 
         public void InfoWingSize()
