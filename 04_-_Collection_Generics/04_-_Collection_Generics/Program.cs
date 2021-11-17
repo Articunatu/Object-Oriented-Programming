@@ -7,20 +7,21 @@ namespace _04___Collection_Generics
     {
         static void Main()
         {
-            PrintStack();         
+            Employee _empo1 = new Employee(101, "Brendan", "Male", 38000);
+            Employee _empo2 = new Employee(104, "May", "Female", 43000);
+            Employee _empo3 = new Employee(107, "Steven", "Male", 58881);
+            Employee _empo4 = new Employee(111, "Anabel", "Female", 49994);
+            Employee _empo5 = new Employee(113, "Zinnia", "Female", 75);
+
+            PrintStack(_empo1, _empo2, _empo3, _empo4, _empo5);
+            PrintList(_empo1, _empo2, _empo3, _empo4, _empo5);
         }
 
-        static void PrintStack()
+        static void PrintStack(Employee empo1, Employee empo2, Employee empo3, Employee empo4, Employee empo5)
         {
             Console.WriteLine("\nPART 1 - STACK\n");
             Console.WriteLine("****************************");
-            Console.WriteLine("Retrieve using Push Method");
-
-            Employee empo1 = new Employee(101, "Brendan", "Male", 38000);
-            Employee empo2 = new Employee(104, "May", "Female", 43000);
-            Employee empo3 = new Employee(107, "Steven", "Male", 58881);
-            Employee empo4 = new Employee(111, "Anabel", "Female", 49994);
-            Employee empo5 = new Employee(113, "Zinnia", "Female", 75);
+            Console.WriteLine("Retrieve using Push Method and Foreach Loop");       
 
             Stack<Employee> stackedEmployees = new Stack<Employee>();
 
@@ -92,8 +93,6 @@ namespace _04___Collection_Generics
 
             string hasThirdEmployee = stackedEmployees.Contains(empo3) ? "Emp3 is in stack" : "Emp3 is NOT in stack";
             Console.WriteLine(hasThirdEmployee);
-
-            PrintList(empo1, empo2, empo3, empo4, empo5);
         }
 
         static void PrintList(Employee empo1, Employee empo2, Employee empo3, Employee empo4, Employee empo5)
@@ -115,12 +114,12 @@ namespace _04___Collection_Generics
             Console.WriteLine("****************************");
 
             Console.WriteLine("The first male employee in this list is:");
-            Employee firstMaleEmployee = listedEmployees.Find(A => A.gender.Equals("Male"));
+            Employee firstMaleEmployee = listedEmployees.Find(employee => employee.gender.Equals("Male"));
             firstMaleEmployee.PrintEmployeeInfo2();
             Console.WriteLine("****************************");
 
             Console.WriteLine("The male employees in this list are:");
-            List<Employee> maleEmployees = listedEmployees.FindAll(A => A.gender.Equals("Male"));
+            List<Employee> maleEmployees = listedEmployees.FindAll(employee => employee.gender.Equals("Male"));
             foreach (Employee maleEmployee in maleEmployees)
             {
                 maleEmployee.PrintEmployeeInfo2();
