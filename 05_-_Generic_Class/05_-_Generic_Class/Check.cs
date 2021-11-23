@@ -5,15 +5,8 @@ namespace _05___Generic_Class
     {
         public bool ToCheck(Unknown firstVar, Unknown secondVar)
         {
-            
-            if (firstVar.Equals(secondVar))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            bool _toCheck = firstVar.Equals(secondVar) ? true : false;
+            return _toCheck;
         }
     }
 
