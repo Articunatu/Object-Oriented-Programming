@@ -5,7 +5,7 @@ namespace _05___Generic_Class
     {
         public bool ToCheck(Unknown firstVar, Unknown secondVar)
         {
-            bool _toCheck = firstVar.Equals(secondVar) ? true : false;
+            bool _toCheck = firstVar.Equals(secondVar); //Simplified ternary operator
             return _toCheck;
         }
     }
