@@ -2,9 +2,13 @@
 
 namespace TypesOfClasses_Tutorial
 {
-
+    #region SealedClass
     public class A
     {
+        public A()
+        {
+
+        }
         public virtual void GetInfo()
         {
             Console.WriteLine("Base class A GetInfo-method");
@@ -33,7 +37,7 @@ namespace TypesOfClasses_Tutorial
     {
         //public override void GetInfo()
         //{
-        //    Console.WriteLine("Child clas C GetInfo-method");
+        //    Console.WriteLine("Child class C GetInfo-method");
         //}
 
         public override void TestInfo()
@@ -41,4 +45,5 @@ namespace TypesOfClasses_Tutorial
             Console.WriteLine("Child class C TestInfo-method");
         }
     }
+    #endregion
 }
